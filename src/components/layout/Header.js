@@ -1,4 +1,5 @@
 import React from 'react'
+import {FaPizzaSlice} from 'react-icons/fa';
 
 export const Header =() => {
     return (
