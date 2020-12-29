@@ -1,13 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import { Header } from './components/layout/Header';
-import { Content } from './components/layout/Content';
+import logo from "./logo.svg";
+import "./App.scss";
+import { Header } from "./components/layout/Header";
+import { Content } from "./components/layout/Content";
+import { ProjectsProvider, SelectedProjectProvider } from "./context";
 
 export const App = () => {
   return (
-    <div className="App">
-      <Header/>
-      <Content/>
-    </div>
+    <SelectedProjectProvider>
+      <ProjectsProvider>
+        <div className="App">
+          <Header />
+          <Content />
+        </div>
+      </ProjectsProvider>
+    </SelectedProjectProvider>
   );
-}
+};
