@@ -11,7 +11,7 @@ export const App = ({darkModeDefault =false}) => {
   return (
     <SelectedProjectProvider>
       <ProjectsProvider>
-        <main className={darkMode ? 'darkmode' : undefined}>
+        <main className={darkMode ? 'darkmode' : undefined} data-testid="application">
           <Header darkMode={darkMode} setDarkMode={setDarkMode}/>
           <Content />
         </main>
