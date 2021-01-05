@@ -67,6 +67,7 @@ export const AddTask = ({
           onKeyDown={() => setShowMain(!showMain)}
           tabIndex={0}
           role='button'
+          aria-label="Add task"
         >
           <span className="add-task__plus">+</span>{" "}
           <span className="add-task__text">Add task</span>
@@ -80,6 +81,7 @@ export const AddTask = ({
               <div data-testid="quick-add-task">
                 <h2 className="header">Quick Add Task</h2>
                 <span
+                aria-label="Cancel adding task"
                   className="add-task__cancel-x"
                   data-testid="add-task-quick-cancel"
                   onClick={() => {
@@ -112,6 +114,7 @@ export const AddTask = ({
       <input
         type="text"
         className="add-task__content"
+        aria-label="Enter Your Task"
         data-testid="add-task-content"
         value={task}
         onChange={(e) => setTask(e.target.value)}
@@ -139,6 +142,7 @@ export const AddTask = ({
           }}
           tabIndex={0}
           role='button'
+          aria-label="Cance adding a task"
         >
           Cancel
         </span>

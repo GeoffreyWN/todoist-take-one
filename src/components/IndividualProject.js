@@ -31,6 +31,7 @@ export const IndividualProject = ({ project }) => {
         onKeyDown={() => setShowConfirm(!showConfirm)}
         tabIndex={0}
         role="button"
+        aria-label="Confirm deletion of project"
       >
         <FaTrashAlt />
         {showConfirm && (
@@ -44,6 +45,7 @@ export const IndividualProject = ({ project }) => {
                 Delete
                 <span onClick={() => setShowConfirm(!showConfirm)}
                 onKeyDown={() => setShowConfirm(!showConfirm)} tabIndex={0}
+                aria-label="cancel adding project, do not delete"
         role="button">Cancel</span>
               </button>
             </div>

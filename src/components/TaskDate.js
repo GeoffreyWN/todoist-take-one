@@ -14,7 +14,7 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) => {
             }} onKeyDown={() => {
               setShowTaskDate(false);
               setTaskDate(moment().format("DD/MM/YYYY"));
-            }} role="button" tabIndex={0}>
+            }} role="button" tabIndex={0} aria-label="select today as the task date">
               <span>
                 <FaSpaceShuttle />
               </span>
@@ -29,7 +29,7 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) => {
             }} onKeyDown={() => {
               setShowTaskDate(false);
               setTaskDate(moment().add(1, 'day').format("DD/MM/YYYY"));
-            }} role="button" tabIndex={0}>
+            }} role="button" tabIndex={0} aria-label="select tomorrow as the task date">
               <span>
                 <FaSun />
               </span>
@@ -45,7 +45,7 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) => {
             onKeyDown={() => {
               setShowTaskDate(false);
               setTaskDate(moment().add(7, 'days').format("DD/MM/YYYY"));
-            }}  role="button" tabIndex={0}>
+            }}  role="button" tabIndex={0} aria-label="select next week as the task date">
             <span>
               <FaRegPaperPlane />
             </span>
