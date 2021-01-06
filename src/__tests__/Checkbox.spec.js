@@ -6,13 +6,13 @@ beforeEach(cleanup); // clean the dom
 
 jest.mock('../firebase.js', () => ({
     firebase: {
-        firestore: jest.fn(() => {
-            collection: jest.fn(() => {
-                doc: jest.fn(() => {
-                    update: jest.fn()
-                })
-            });
-        })
+        firestore: jest.fn(() => ({
+            collection: jest.fn(() => ({
+                doc: jest.fn(() => ({
+                    update: jest.fn(),
+                }))
+            }))
+        }))
     }
 }));
 
@@ -25,7 +25,7 @@ describe('<Checkbox />', () => {
             expect(queryByTestId('checkbox-action')).toBeTruthy();
         })
 
-        it('renders the task checkbox and accepts a click', () => {
+        it('renders the task checkbox and accepts a onClick', () => {
             const {queryByTestId} = render(
                 <Checkbox id="1" taskDesc="Finish this task" />
             )
