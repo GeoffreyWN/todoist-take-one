@@ -9,6 +9,9 @@ html {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
+*:focus{
+  outline: none;
+}
 
 body {
   margin: 0;
